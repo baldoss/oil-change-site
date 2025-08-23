@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Quick Lube Mobile — Oil Change Service</title>
-  <meta name="description" content="Mobile oil change service for busy students and professionals. Fast, friendly, and affordable.">
+  <meta name="description" content="On-site oil changes for busy students and professionals. Book by text—no apps, no forms.">
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,11 +30,10 @@
         <a href="#about" class="text-sm font-semibold hover:text-indigo-600">About</a>
       </nav>
       <div class="flex items-center gap-3">
-        <!-- TEXT ONLY (no call button) -->
-        <a
-          href="sms:+13193834603?&body=Hi%20Basil%20%E2%80%94%20I%27d%20like%20to%20book%20an%20oil%20change.%0AName%3A%20%0APhone%3A%20%0AVehicle%20(year%2Fmake%2Fmodel)%3A%20%0ALocation%20(city%2Fneighborhood)%3A%20%0APreferred%20date%3A%20%0APreferred%20time%3A%20"
+        <!-- TEXT ONLY (no call button). href filled by JS for iOS/Android -->
+        <a id="smsTop"
           class="inline-flex items-center rounded-2xl px-4 py-2 bg-indigo-600 text-white text-sm font-semibold shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          >
+        >
           Text to Book
         </a>
       </div>
@@ -46,10 +45,10 @@
     <div class="max-w-6xl mx-auto px-4 py-14 grid lg:grid-cols-2 gap-10 items-center">
       <div>
         <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight">
-          Mobile Oil Change — We Come to You
+          On‑Site Oil Changes.<br/>You Chill, We Wrench.
         </h1>
         <p class="mt-3 text-gray-700">
-          Fast, clean, and convenient service for busy students and professionals. Stay on schedule while we take care of your car.
+          We come to your driveway or workplace. Most services done in under 30 minutes. Book by text—no apps, no forms.
         </p>
 
         <!-- Subheaders row -->
@@ -66,10 +65,8 @@
         </div>
 
         <div class="mt-8 flex items-center gap-3">
-          <a
-            href="sms:+13193834603?&body=Hi%20Basil%20%E2%80%94%20I%27d%20like%20to%20book%20an%20oil%20change.%0AName%3A%20%0APhone%3A%20%0AVehicle%20(year%2Fmake%2Fmodel)%3A%20%0ALocation%20(city%2Fneighborhood)%3A%20%0APreferred%20date%3A%20%0APreferred%20time%3A%20"
-            class="inline-flex items-center rounded-2xl px-5 py-3 bg-indigo-600 text-white text-base font-bold shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          >
+          <a id="smsHero"
+             class="inline-flex items-center rounded-2xl px-5 py-3 bg-indigo-600 text-white text-base font-bold shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
             Text to Book
           </a>
           <span class="text-sm text-gray-600">Or text <span class="font-semibold">319‑383‑4603</span></span>
@@ -100,7 +97,7 @@
   <section id="pricing" class="py-14">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-2xl font-extrabold">Transparent Pricing</h2>
-      <p class="text-gray-600 mt-1">Oil & filter service includes top-off of washer fluid and tire pressure check.</p>
+      <p class="text-gray-600 mt-1">Simple, upfront prices. No upsell pressure.</p>
 
       <div class="mt-8 grid md:grid-cols-3 gap-6">
         <div class="bg-white rounded-3xl border border-gray-100 shadow-sm p-6">
@@ -108,8 +105,6 @@
           <p class="mt-1 text-3xl font-extrabold">$99</p>
           <ul class="mt-4 space-y-2 text-sm text-gray-700">
             <li>• Full oil change + oil filter</li>
-            <li>• Tire pressure check</li>
-            <li>• Fluids glance</li>
           </ul>
         </div>
 
@@ -118,8 +113,7 @@
           <p class="mt-1 text-3xl font-extrabold">$120</p>
           <ul class="mt-4 space-y-2 text-sm text-gray-700">
             <li>• Full oil change + oil filter</li>
-            <li>• Larger oil capacities / premium filters</li>
-            <li>• Tire pressure check</li>
+            <li>• For larger oil capacities / premium filters</li>
           </ul>
         </div>
 
@@ -129,7 +123,7 @@
           <ul class="mt-4 space-y-2 text-sm text-gray-700">
             <li>• Engine Air Filter</li>
             <li>• Cabin Air Filter</li>
-            <li>• Pricing varies by vehicle</li>
+            <li>• Price varies by vehicle</li>
           </ul>
         </div>
       </div>
@@ -171,10 +165,10 @@
           <p class="text-gray-700 mt-2">
             Tap “Text to Book” and send: <span class="font-semibold">Name, Phone, Vehicle (year/make/model), Location (city/neighborhood), Preferred date, Preferred time.</span> I’ll confirm availability and details.
           </p>
-          <a
-            href="sms:+13193834603?&body=Hi%20Basil%20%E2%80%94%20I%27d%20like%20to%20book%20an%20oil%20change.%0AName%3A%20%0APhone%3A%20%0AVehicle%20(year%2Fmake%2Fmodel)%3A%20%0ALocation%20(city%2Fneighborhood)%3A%20%0APreferred%20date%3A%20%0APreferred%20time%3A%20"
-            class="inline-flex mt-4 items-center rounded-xl px-4 py-2 bg-indigo-600 text-white text-sm font-semibold shadow hover:bg-indigo-700"
-          >Text to Book</a>
+          <a id="smsFaq"
+             class="inline-flex mt-4 items-center rounded-xl px-4 py-2 bg-indigo-600 text-white text-sm font-semibold shadow hover:bg-indigo-700">
+            Text to Book
+          </a>
         </div>
 
         <div class="bg-white rounded-2xl border border-gray-100 p-6">
@@ -193,8 +187,7 @@
       <h2 class="text-2xl font-extrabold">About Me</h2>
       <div class="mt-6 bg-white border border-gray-100 rounded-3xl p-6 shadow-sm">
         <p class="text-gray-800">
-          Hey! My name is Basil — <span class="italic">not the plant</span> — and I’m a certified oil change technician serving busy students and professionals.
-          I’m detail‑oriented and treat every car like my own. Give me a try!
+          Hey! My name is Basil — <span class="italic">not the plant</span> — and I’m a certified oil change technician serving busy students and professionals in the Iowa City area. I’m detail‑oriented, safety‑minded, and I treat every car like my own. I study Mechanical Engineering and I’m into machines that use modern tech and automation. If you want a convenient, no‑mess oil change at your home, work, or dorm—give me a try!
         </p>
         <div class="mt-5 flex flex-wrap gap-2">
           <span class="inline-flex items-center gap-2 bg-indigo-50 text-indigo-900 border border-indigo-100 rounded-full px-3 py-1 text-sm font-semibold">
@@ -217,10 +210,8 @@
       <h2 class="text-3xl font-extrabold">Ready for a convenient oil change?</h2>
       <p class="mt-2 opacity-90">Text now and I’ll get you scheduled.</p>
       <div class="mt-6">
-        <a
-          href="sms:+13193834603?&body=Hi%20Basil%20%E2%80%94%20I%27d%20like%20to%20book%20an%20oil%20change.%0AName%3A%20%0APhone%3A%20%0AVehicle%20(year%2Fmake%2Fmodel)%3A%20%0ALocation%20(city%2Fneighborhood)%3A%20%0APreferred%20date%3A%20%0APreferred%20time%3A%20"
-          class="inline-flex items-center rounded-2xl px-6 py-3 bg-white text-indigo-700 text-base font-bold shadow hover:bg-gray-100"
-        >
+        <a id="smsCta"
+           class="inline-flex items-center rounded-2xl px-6 py-3 bg-white text-indigo-700 text-base font-bold shadow hover:bg-gray-100">
           Text to Book — 319‑383‑4603
         </a>
       </div>
@@ -239,8 +230,33 @@
     </div>
   </footer>
 
+  <!-- JS: device-aware SMS links + current year -->
   <script>
+    // Set current year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Cross-platform SMS deep link
+    // iOS expects: sms:+1NUMBER&body=...
+    // Android expects: sms:+1NUMBER?body=...
+    const number = '+13193834603';
+    const prefill =
+      'Hi Basil — I\\'d like to book an oil change.%0AName:%20%0APhone:%20%0AVehicle%20(year/make/model):%20%0ALocation%20(city/neighborhood):%20%0APreferred%20date:%20%0APreferred%20time:%20';
+
+    function smsHref() {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      const isiOS = /iPad|iPhone|iPod/.test(ua);
+      const isAndroid = /Android/.test(ua);
+      if (isiOS) return `sms:${number}&body=${prefill}`;
+      if (isAndroid) return `sms:${number}?body=${prefill}`;
+      // Desktop fallback (opens default handler or shows number)
+      return `sms:${number}`;
+    }
+
+    const href = smsHref();
+    ['smsTop','smsHero','smsFaq','smsCta'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.setAttribute('href', href);
+    });
   </script>
 </body>
 </html>
